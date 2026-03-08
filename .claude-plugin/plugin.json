@@ -1,0 +1,12 @@
+{
+  "name": "dave-liddament",
+  "version": "0.0.1",
+  "description": "Various skills for PHP projects",
+  "author": {
+    "name": "Dave Liddament"
+  },
+  "homepage": "https://github.com/DaveLiddament/php-claude-skills",
+  "repository": "https://github.com/DaveLiddament/php-claude-skills",
+  "license": "MIT",
+  "keywords": ["PHP", "PHPStan", "PHP Project Setup"]
+}
