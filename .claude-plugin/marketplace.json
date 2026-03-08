@@ -7,7 +7,7 @@
     {
       "name": "dave-liddament",
       "description": "Various skills for PHP projects",
-      "source": "./"
+      "source": "./plugins/dave-liddament"
     }
   ]
 }
