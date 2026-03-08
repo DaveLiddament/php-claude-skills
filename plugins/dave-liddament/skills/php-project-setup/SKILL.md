@@ -20,7 +20,7 @@ Ensure the following directories exist:
 
 ## PHP Version
 
-The project requires PHP 8.3 or higher. Ensure `composer.json` has the appropriate `require.php` constraint.
+Detect the installed PHP version by running `php -v` and extracting the major.minor version (e.g. 8.5). Set the `require.php` constraint in `composer.json` to `~X.Y` (e.g. `~8.5`).
 
 ## Dependencies
 
