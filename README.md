@@ -58,6 +58,21 @@ Set up Docker for a PHP CLI project with Xdebug support.
 /dave-liddament:docker-php-cli
 ```
 
+### `makefile-php-cli`
+
+Create a Makefile wrapping Docker and PHP tooling for a CLI project.
+
+- OS detection with Linux user mapping for correct file permissions
+- Docker targets: `build`, `up`, `start`, `down`, `logs`
+- App targets generated dynamically from `composer.json` scripts
+- Always includes `app/shell` and `app/composer` with passthrough params
+- Self-documenting via `make help`
+- Updates CLAUDE.md to prefer Make targets over direct Docker commands
+
+```bash
+/dave-liddament:makefile-php-cli
+```
+
 ## License
 
 MIT
