@@ -7,8 +7,7 @@ A Claude Code plugin providing skills for PHP projects.
 From within a Claude Code session, run:
 
 ```
-/plugin marketplace add DaveLiddament/php-claude-skills
-/plugin install dave-liddament@php-claude-skills
+/plugin install dave-liddament --source github --repo DaveLiddament/php-claude-skills
 ```
 
 ## Skills
