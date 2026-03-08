@@ -4,8 +4,11 @@ A Claude Code plugin providing skills for PHP projects.
 
 ## Installation
 
-```bash
-claude /plugin install --from https://github.com/DaveLiddament/php-claude-skills
+From within a Claude Code session, run:
+
+```
+/plugin marketplace add DaveLiddament/php-claude-skills
+/plugin install dave-liddament@php-claude-skills
 ```
 
 ## Skills
