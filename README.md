@@ -30,6 +30,20 @@ Includes:
 /dave-liddament:php-project-setup
 ```
 
+### `phpstan-custom-rule`
+
+Create a custom PHPStan rule with tests and fixtures. Handles both initial environment setup (directories, autoloading, test suite, config) and rule creation.
+
+- Sets up `utils/phpstan/` directory structure on first use
+- Creates test fixtures first for review before implementing the rule
+- Generates rule class, test class, and fixture files
+- Registers the rule in `phpstan.neon`
+- Supports error message placeholders and custom formatters via `phpstan-rule-test-helper`
+
+```bash
+/dave-liddament:phpstan-custom-rule Disallow echo statements
+```
+
 ## License
 
 MIT
