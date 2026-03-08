@@ -44,6 +44,20 @@ Create a custom PHPStan rule with tests and fixtures. Handles both initial envir
 /dave-liddament:phpstan-custom-rule Disallow echo statements
 ```
 
+### `docker-php-cli`
+
+Set up Docker for a PHP CLI project with Xdebug support.
+
+- Generates Dockerfile and docker-compose.yml
+- Xdebug enabled by default, easy to toggle off
+- Composer cache persisted via Docker volume
+- PHP version configurable via build arg
+- Updates CLAUDE.md to instruct Claude to use Docker for all PHP commands
+
+```bash
+/dave-liddament:docker-php-cli
+```
+
 ## License
 
 MIT
