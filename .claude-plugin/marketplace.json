@@ -1,0 +1,13 @@
+{
+  "name": "php-claude-skills",
+  "owner": {
+    "name": "Dave Liddament"
+  },
+  "plugins": [
+    {
+      "name": "dave-liddament",
+      "description": "Various skills for PHP projects",
+      "source": "./"
+    }
+  ]
+}
