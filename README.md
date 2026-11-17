@@ -25,6 +25,7 @@ Skills are invoked as `/dave-liddament:<skill-name>`.
 - [`php-project-setup`](#php-project-setup) — Standard PHP project tooling and config
 - [`makefile-php-cli`](#makefile-php-cli) — Makefile wrapping Docker and PHP commands
 - [`phpstan-custom-rule`](#phpstan-custom-rule) — Create custom PHPStan rules
+- [`pr-visualiser`](#pr-visualiser) — Visual explainer page for a PR or branch, to guide code review
 
 ### `docker-php-cli`
 
@@ -85,6 +86,22 @@ Create a custom PHPStan rule with tests and fixtures. Handles both initial envir
 
 ```bash
 /dave-liddament:phpstan-custom-rule Disallow echo statements
+```
+
+### `pr-visualiser`
+
+Turn a pull request, or the current branch's changes against `main`/`master`, into a published visual explainer page that guides a code review. Works with any language, not just PHP.
+
+- High-level overview: what the change makes possible, why it exists, and a stats strip
+- Colour-coded change map showing what's new, changed, unchanged-but-relied-on, and removed
+- Flow and sequence diagrams, before/after comparisons, and charts of where the lines went
+- Walkthrough of each changed piece, contract and test-coverage tables
+- A "where to look hardest" guide with `path:line` references; for merged PRs, each point is checked against the default branch
+- Publishes as a private Artifact page (requires `gh` for PRs)
+
+```bash
+/dave-liddament:pr-visualiser 124
+/dave-liddament:pr-visualiser            # current branch vs main/master
 ```
 
 ## License
