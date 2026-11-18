@@ -25,6 +25,7 @@ Skills are invoked as `/dave-liddament:<skill-name>`.
 - [`php-project-setup`](#php-project-setup) — Standard PHP project tooling and config
 - [`makefile-php-cli`](#makefile-php-cli) — Makefile wrapping Docker and PHP commands
 - [`phpstan-custom-rule`](#phpstan-custom-rule) — Create custom PHPStan rules
+- [`phpstan-rule-discovery`](#phpstan-rule-discovery) — Find PHPStan rules worth adding to a project
 
 ### `docker-php-cli`
 
@@ -85,6 +86,20 @@ Create a custom PHPStan rule with tests and fixtures. Handles both initial envir
 
 ```bash
 /dave-liddament:phpstan-custom-rule Disallow echo statements
+```
+
+### `phpstan-rule-discovery`
+
+Find the PHPStan rules and config changes worth adding to an existing project. Uses subagents, so it is a large, token-heavy job; it confirms the scale before starting.
+
+- Mines fix commits, PR review comments and the project's conventions for rule ideas
+- Measures each candidate against a clean worktree of the default branch, mostly by running a prototype rule
+- Writes `phpstan-rule-review/README.md`: a shortlist by recommendation, a summary table per chapter, live bugs found and a rollout order
+- Each rule's write-up has bad/good examples from the repo, every violation today and a build sketch
+- Doesn't change the project; offers a draft PR, issues for live bugs, and `phpstan-custom-rule` to build the chosen rules
+
+```bash
+/dave-liddament:phpstan-rule-discovery
 ```
 
 ## License
